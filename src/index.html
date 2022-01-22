@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+        <header>
+            <form id="form_transaction">
+                <div class="form-section">
+                    <label for="montant">Nom</label>
+                    <input class="form-control" id="name" type="text" placeholder="Entrer le nom" required>
+                </div>
+                
+                <div class="form-section">
+                    <label for="type">Type</label>
+                    <select class="form-control" id="type" required>
+                        <option value="">Selectionner</option>
+                        <option value="debit">Debit</option>
+                        <option value="credit">Credit</option>
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="montant">Montant</label>
+                    <input class="form-control" id="montant" type="text" placeholder="Entrer le montant" required>
+                </div>
+                <div class="form-section">
+                    <button type="submit" class="btn btn-send">Valider</button>
+                </div>
+            </form>
+        </header>
+        
+        <main>
+            <div class="etat_caisse">
+                <h3 class="etat_title">Solde : </h4>
+                <h3 id="solde_total"></h3>
+            </div>
+            <div class="etat_caisse">
+                <h3 class="etat_title">Nombre de transactions : </h2>
+                <table>
+                    <tr>
+                        <td>Debit</td>
+                        <td>Credit</td>
+                    </tr>
+                    <tr>
+                        <td><h4 id="nombre_transaction_debit"></h4></td>
+                        <td><h4 id="nombre_transaction_credit"></h4></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="liste">
+                <h3 class="etat_title">Liste des transactions : </h2>
+                <ul id="trans_liste">
+                    
+                </ul>
+                <h3 class="etat_title">Répartion des transactions par personnels : </h2>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Credit</td>
+                                <td>Debit</td>
+                            </tr>
+                        </thead>
+                        <tbody id="trans_name">
+
+                        </tbody>
+                    </table>
+                
+            </div>
+        </main>
+            
+        <script src="app.ts" async defer></script>
+    </body>
+</html> 
